@@ -1,0 +1,21 @@
+{
+  "name": "OzBigWinAustralia.com - OZ Lotto",
+  "short_name": "OZ Lotto",
+  "description": "Australia's favorite lottery game with massive jackpots",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

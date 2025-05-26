@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --oz-primary: #1e293b;
+  --oz-secondary: #3b82f6;
+  --oz-accent: #8b5cf6;
+  --oz-light: #06b6d4;
+  --oz-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+  --oz-dark-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .oz-gradient {
+    background: var(--oz-gradient);
+  }
+
+  .oz-dark-gradient {
+    background: var(--oz-dark-gradient);
+  }
+
+  .oz-card {
+    @apply bg-white rounded-2xl shadow-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-200;
+  }
+
+  .oz-button-primary {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+  }
+
+  .oz-button-secondary {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold px-8 py-4 rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+  }
+
+  .oz-text-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent;
+  }
+}
+
+.countdown-timer {
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oz-card {
+    @apply hover:scale-100 hover:transform-none;
+  }
+  .oz-button-primary,
+  .oz-button-secondary {
+    @apply hover:transform-none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-blue-500 to-purple-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-blue-600 to-purple-700;
+}
