@@ -115,18 +115,20 @@ export function CountdownTimer() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-          <p className="text-xl font-bold text-cyan-300">DRAW #{Math.floor(Math.random() * 10000) + 28000}</p>
+          <p className="text-xl font-bold text-cyan-300">
+            DRAW #{Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000)) + 28000}
+          </p>
           <p className="text-lg opacity-90">
             (
             {timeLeft.nextTuesday
               ? timeLeft.nextTuesday
-                  .toLocaleDateString("en-AU", {
-                    weekday: "long",
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
-                  })
-                  .toUpperCase()
+                .toLocaleDateString("en-AU", {
+                  weekday: "long",
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric",
+                })
+                .toUpperCase()
               : "LOADING..."}
             )
           </p>
