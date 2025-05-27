@@ -15,6 +15,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-slate-50 text-slate-900;
   }
@@ -30,15 +31,15 @@
   }
 
   .oz-card {
-    @apply bg-white rounded-2xl shadow-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-slate-200;
+    @apply bg-white rounded-2xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl border border-slate-200;
   }
 
   .oz-button-primary {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .oz-button-secondary {
-    @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold px-8 py-4 rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+    @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold px-8 py-4 rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .oz-text-gradient {
@@ -58,13 +59,113 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .oz-card {
-    @apply hover:scale-100 hover:transform-none;
+/* Простий мобільний адаптив */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .oz-button-primary,
-  .oz-button-secondary {
-    @apply hover:transform-none;
+
+  .text-8xl {
+    font-size: 3rem;
+  }
+
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+
+  .text-5xl {
+    font-size: 2rem;
+  }
+
+  .text-4xl {
+    font-size: 1.5rem;
+  }
+
+  .py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .py-20 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-8xl {
+    font-size: 2rem;
+  }
+
+  .text-6xl {
+    font-size: 1.75rem;
+  }
+
+  .text-5xl {
+    font-size: 1.5rem;
+  }
+
+  .text-4xl {
+    font-size: 1.25rem;
+  }
+
+  .py-24 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .py-20 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .py-16 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .text-8xl {
+    font-size: 1.5rem;
+  }
+
+  .text-6xl {
+    font-size: 1.25rem;
+  }
+
+  .text-5xl {
+    font-size: 1.125rem;
+  }
+
+  .text-4xl {
+    font-size: 1rem;
+  }
+
+  .py-24 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .py-20 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .py-16 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
